@@ -1,0 +1,9 @@
+class SpellBook{
+
+boolean recievedSpell(Spell spell){
+}
+void addSpell(){
+}
+void castSpell(){
+}
+}
