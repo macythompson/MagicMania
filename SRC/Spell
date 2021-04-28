@@ -1,0 +1,12 @@
+class Spell {
+  //member variables
+    string name;
+  //constructor
+    Spell(string name){
+    this.name = name;
+  }
+  //member methods
+  void spellFunction() {
+    
+  }
+}
