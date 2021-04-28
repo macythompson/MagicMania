@@ -6,3 +6,4 @@ William Hackett Responsibilities: Create UML Class Diagram
 
 Kevin Liu Responsibilities: Create SRC folder with class names, member variables, etc. 
 
+![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/MagicMania%20UML%20Screencapture.png?raw=true)
