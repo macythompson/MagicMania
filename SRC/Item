@@ -1,6 +1,6 @@
 class Item {
   int object;
-  String[] name = {};
+  string name;
   
   void take(){
   }
