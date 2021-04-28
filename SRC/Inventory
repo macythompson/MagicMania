@@ -1,5 +1,6 @@
 class Inventory{
-ArrayList<Item>  items;
+int x, y;
+color c;
 boolean takenItem(Item item){
 }
 void addItem(){
