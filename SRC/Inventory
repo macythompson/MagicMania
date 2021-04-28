@@ -1,0 +1,11 @@
+class Inventory{
+ArrayList<Item>  items;
+boolean takenItem(Item item){
+}
+void addItem(){
+}
+void useItem(){
+}
+void discardItem(){
+}
+}
