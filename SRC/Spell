@@ -1,6 +1,7 @@
 class Spell {
   //member variables
     string name;
+    int spell;
   //constructor
     Spell(string name){
     this.name = name;
