@@ -6,7 +6,7 @@ class BackGround {
   PImage photo;
 
   //Constructor
-  BackGround(int x, int y, locationName, photo) {
+  BackGround(int x, int y, String locationName, PImage photo) {
     this.x = x;
     this.y = y;
   }
