@@ -1,9 +1,0 @@
-class Item {
-  int object;
-  string name;
-  
-  void take(){
-  }
-  void itemFunction(){
-  }
-}
