@@ -9,3 +9,7 @@ Kevin Liu Responsibilities: Create SRC folder with class names, member variables
 ![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/FinalProjectClassDiagram.pdf)
 
 ![Magic Mania Graphics](https://github.com/macythompson/MagicMania/blob/main/Images/IMG_2131.jpg?raw=true)
+
+![Magic Mania Start Screen](![Magic Mania Graphics](https://github.com/macythompson/MagicMania/blob/main/Images/IMG_2131.jpg?raw=true)
+)
+
