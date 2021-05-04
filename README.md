@@ -1,10 +1,10 @@
 # Magic Mania
 ## Group Members: Macy Thompson, William Hackett, Kevin Liu
-Macy Thompon Responsibilities: Create github directory and GUI mockup of various screens
+Macy Thompon Responsibilities: Create Storyboard and design graphics
 
-William Hackett Responsibilities: Create UML Class Diagram
+William Hackett Responsibilities: Programming Background and Character classes and implementing graphics
 
-Kevin Liu Responsibilities: Create SRC folder with class names, member variables, etc. 
+Kevin Liu Responsibilities: Programming Spells, SpellBook, Item, and Inventory classes  
 
 ![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/FinalProjectClassDiagram.pdf)
 
