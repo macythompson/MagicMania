@@ -6,6 +6,7 @@ SpellBook spellbook;
 boolean play;
 boolean openInventory;
 boolean openSpellBook;
+PImage StartScreen;
 
 void setup() {
   size(1000, 1000);
@@ -71,8 +72,9 @@ void keyPressed() {
 }
 void startScreen() {
   //trying to set up parameters, should take up entire screen
-  background(128);
-  //rect(width/2, height/2, 100, 100);
+  background(255);
+  StartScreen = loadImage("Start Screen-1.png.png");
+  image(StartScreen, 0, 0, 1000, 950);
   
   if (mousePressed) {
     play = true;
@@ -88,3 +90,5 @@ void infoPanel() {
   textSize(10);
   text("Press I to open Inventory and S to open SpellBook", 50, height-20);
 }
+
+  
