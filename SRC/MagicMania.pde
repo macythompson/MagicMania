@@ -67,6 +67,7 @@ void startScreen() {
   //trying to set up parameters, should take up entire screen
   background(128);
   rect(width/2, height/2, width, height);
+  text("Welcome to Magic Mania", width/2, height/2);
   
   if (mousePressed) {
     play = true;
