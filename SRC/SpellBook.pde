@@ -12,7 +12,6 @@ class SpellBook {
   //memeber methods
   void display() {
     //trying to set up parameters, should take up left half of screen
-   background(c);
    rect(250,height/2,width/2,height);
   }
   void addSpell() {
