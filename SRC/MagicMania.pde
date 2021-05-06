@@ -82,12 +82,3 @@ void infoPanel() {
   textSize(10);
   text("Press I to open Inventory and S to open SpellBook", 50, height-20);
 }
-
-
-
-
-//Are these two nessesary? can't we just open them using keypressed?
-void openInventory() {
-}
-void openSpellbook() {
-}
