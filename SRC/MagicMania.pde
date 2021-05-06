@@ -2,7 +2,6 @@ Item[] items = new Item[8];
 Spell[] spells = new Spell[10];
 Inventory inventory;
 SpellBook spellbook;
-//The following booleans are for showing the different screens: getting out of start screen and opening inventory/spellbook
 boolean play;
 boolean openInventory;
 boolean openSpellBook;
@@ -12,7 +11,6 @@ void setup() {
   size(1000, 1000);
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
-  //Struggling to set up arrays, can you help?
   items[0] = new Item("locket");
   items[1] = new Item("knightKey");
   items[2] = new Item("lockPickNote");
@@ -45,7 +43,6 @@ void draw() {
   } else {
     background(#050505);
     infoPanel();
-    //Am I supposed to use display to open the screens, or is there another method? because I'm getting errors here.
     if (openInventory==true) {
       inventory.display();
     }
@@ -58,7 +55,6 @@ void mousePressed() {
   //what is this for again?? clicking characters, places, items and spells?
 }
 void keyPressed() {
-  //Are there any other keys that will be used in game?
   if (key == 'I' || key== 'i') {
     openInventory = true;
   } else {
@@ -71,7 +67,6 @@ void keyPressed() {
   }
 }
 void startScreen() {
-  //trying to set up parameters, should take up entire screen
   background(255);
   StartScreen = loadImage("Start Screen-1.png.png");
   image(StartScreen, 0, 0, 1000, 950);
