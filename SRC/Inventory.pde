@@ -12,7 +12,6 @@
   //memeber methods
   void display() {
     //trying to set up parameters, should take up right half of screen
-   background(c);
    rect(750,height/2,width/2,height);
    
   }
