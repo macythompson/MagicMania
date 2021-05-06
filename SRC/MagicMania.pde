@@ -9,8 +9,8 @@ boolean openSpellBook;
 
 void setup() {
   size(1000, 1000);
-  inventory = new Inventory(#FF00FF);
-  spellbook = new SpellBook(#000AFA);
+  inventory = new Inventory(#EDE311);
+  spellbook = new SpellBook(#0FF500);
   //Struggling to set up arrays, can you help?
   items[0] = new Item("locket");
   items[1] = new Item("knightKey");
@@ -33,20 +33,22 @@ void setup() {
   play = false;
   openInventory = false;
   openSpellBook = false;
+  
+  
 }
 void draw() {
-  noCursor();
   // Gameplay
   if (!play) {
     startScreen();
+    infoPanel();
   } else {
-    background(0);
+    background(#050505);
     infoPanel();
     //Am I supposed to use display to open the screens, or is there another method? because I'm getting errors here.
-    if (!openInventory) {
+    if (openInventory==true) {
       inventory.display();
     }
-    if (!openSpellBook) {
+    if (openSpellBook==true) {
       spellbook.display();
     }
   }
@@ -56,18 +58,21 @@ void mousePressed() {
 }
 void keyPressed() {
   //Are there any other keys that will be used in game?
-  if (key == 'I') {
+  if (key == 'I' || key== 'i') {
     openInventory = true;
+  } else {
+    openInventory = false;
   }
-  if (key == 'S') {
+  if (key == 'S'|| key=='s') {
     openSpellBook = true;
+  } else {
+    openSpellBook = false;
   }
 }
 void startScreen() {
   //trying to set up parameters, should take up entire screen
   background(128);
-  rect(width/2, height/2, width, height);
-  text("Welcome to Magic Mania", width/2, height/2);
+  //rect(width/2, height/2, 100, 100);
   
   if (mousePressed) {
     play = true;
@@ -75,11 +80,11 @@ void startScreen() {
 }
 void infoPanel() {
   //Probably has bad parameters, will edit later
-  fill(128, 128);
+  fill(#E80C0C);
   noStroke();
   rectMode(CORNER);
   rect(0, height-50, width, 50);
-  fill(0, 255, 255);
+  fill(255);
   textSize(10);
   text("Press I to open Inventory and S to open SpellBook", 50, height-20);
 }
