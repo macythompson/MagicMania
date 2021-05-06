@@ -44,10 +44,10 @@ void draw() {
     infoPanel();
     //Am I supposed to use display to open the screens, or is there another method? because I'm getting errors here.
     if (!openInventory) {
-      Inventory.display();
+      inventory.display();
     }
     if (!openSpellBook) {
-      SpellBook.display();
+      spellbook.display();
     }
   }
 }
