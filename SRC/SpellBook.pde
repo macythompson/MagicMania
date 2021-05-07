@@ -3,19 +3,23 @@ class SpellBook {
   int x, y;
   color c;
   //boolean error, pls fix
-  boolean recievedSpell(Spell spell) {
-  }
+  //boolean recievedSpell(Spell spell) {
+  //}
   //constructor
-  SpellBook(color c){
+  SpellBook(color c) {
     this.c = c;
   }
   //memeber methods
   void display() {
     //trying to set up parameters, should take up left half of screen
-   rect(250,height/2,width/2,height);
+    stroke(#9E40E3);
+    strokeWeight(20);
+    fill(#DBE87C);
+    rect(250, height-750, 500, 500);
   }
   void addSpell() {
   }
   void castSpell() {
   }
 }
+
