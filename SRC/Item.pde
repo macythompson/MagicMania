@@ -1,11 +1,11 @@
 class Item {
   //member variables
   int object, x, y, h, w;
-  String name;
+  String name, description;
   color c1, c2;
   boolean over;
   //constructer
-  Item(String name, int x, int y, int h, int w, color c1, color c2) {
+  Item(String name, int x, int y, int h, int w, color c1, color c2, String description) {
     this.name = name;
     this.x = x;
     this.y = y;
@@ -13,6 +13,7 @@ class Item {
     this.w = w;
     this.c1 = c1;
     this.c2 = c2;
+    this.description = description;
     object = int(random(9));
   }
   //member methods
@@ -20,6 +21,8 @@ class Item {
     stroke(0);
     if (over) {
       fill(c1);
+      textSize(30);
+      text(description, 0, 800);
     } else {
       fill(c2);
     }
@@ -33,7 +36,7 @@ class Item {
 
   void take() {
   }
-  
+
   void itemFunction() {
     switch(object) {
     case 0: // SpellBook
@@ -60,3 +63,4 @@ class Item {
     }
   }
 }
+
