@@ -12,8 +12,8 @@ void setup() {
   items[0] = new Item("Spell Book", 0, 100, 100, 200, #00FF0A, #FA03EE, "You need a book to cast spells? I just memorize them");
   items[1] = new Item("Locket", 200, 100, 100, 200, #00FF0A, #FA03EE, "Useless starter item");
   items[2] = new Item("BullySpells", 400, 100, 100, 200, #00FF0A, #FA03EE, "Why you accept item from a bully??");
-  items[3] = new Item("Knight Key", 600, 100, 100, 200, #00FF0A, #FA03EE, "Opens a door or something");
-  items[4] = new Item("Lock Pick Note", 800, 100, 100, 200, #00FF0A, #FA03EE, "Guess you don't need keys anymore");
+  items[3] = new Item("Knight Key", 600, 100, 100, 200, #00FF0A, #FA03EE, "Use this as a weapon to open people's minds...");
+  items[4] = new Item("Lockpick Note", 800, 100, 100, 200, #00FF0A, #FA03EE, "Guess you don't need keys anymore");
   items[5] = new Item("Chamber Key", 0, 200, 100, 200, #00FF0A, #FA03EE, "Key to a door that you can't lockpick for some reason");
   items[6] = new Item("Chains", 200, 200, 100, 200, #00FF0A, #FA03EE, "No idea why you would need these");
   items[7] = new Item("Lock", 400, 200, 100, 200, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, not lock em up again");
@@ -24,8 +24,8 @@ void setup() {
   spells[2] = new Spell("Pierce", 400, 300, 100, 200, #0FEDFF, #0024FF, "Ha Ha sword goes stab stab");
   spells[3] = new Spell("Distract", 600, 300, 100, 200, #0FEDFF, #0024FF, "Insert Henry Stickman reference");
   spells[4] = new Spell("Snatch", 800, 300, 100, 200, #0FEDFF, #0024FF, "How to be a theif 101");
-  spells[5] = new Spell("Lock Pick", 0, 400, 100, 200, #0FEDFF, #0024FF, "How to be a criminal 101");
-  spells[6] = new Spell("Freeze", 200, 400, 100, 200, #0FEDFF, #0024FF, "Another spell that you can spam");
+  spells[5] = new Spell("Lockpick", 0, 400, 100, 200, #0FEDFF, #0024FF, "How to be a criminal 101");
+  spells[6] = new Spell("Freeze", 200, 400, 100, 200, #0FEDFF, #0024FF, "Another spell for you to spam");
   spells[7] = new Spell("Blind", 400, 400, 100, 200, #0FEDFF, #0024FF, "Eye penetration");
   spells[8] = new Spell("Slow", 600, 400, 100, 200, #0FEDFF, #0024FF, "Why use slow when you have freeze?");
   spells[9] = new Spell("Heal", 800, 400, 100, 200, #0FEDFF, #0024FF, "The only useful spell");
