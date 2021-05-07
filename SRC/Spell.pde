@@ -1,11 +1,11 @@
 class Spell {
   //member variables
-  String name;
+  String name, description;
   int spell, x, y, h, w;
   color c1, c2;
   boolean over;
   //constructor
-  Spell(String name, int x, int y, int h, int w, color c1, color c2) {
+  Spell(String name, int x, int y, int h, int w, color c1, color c2, String description) {
     this.name = name;
     this.x = x;
     this.y = y;
@@ -13,6 +13,7 @@ class Spell {
     this.w = w;
     this.c1 = c1;
     this.c2 = c2;
+    this.description = description;
     spell = int(random(9));
   }
   //member methods
@@ -20,6 +21,8 @@ class Spell {
     stroke(0);
     if (over) {
       fill(c1);
+      textSize(30);
+      text(description, 0, 800);
     } else {
       fill(c2);
     }
