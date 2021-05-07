@@ -17,7 +17,7 @@ void setup() {
   items[3] = new Item("knightKey", 600, 100, 100, 200, #00FF0A, #FA03EE);
   items[4] = new Item("lockPickNote", 800, 100, 100, 200, #00FF0A, #FA03EE);
   items[5] = new Item("chamberKey", 0, 200, 100, 200, #00FF0A, #FA03EE);
-  items[6] = new Item("chains", 200, 200, 100, 200, #00FF0A ,#FA03EE);
+  items[6] = new Item("chains", 200, 200, 100, 200, #00FF0A, #FA03EE);
   items[7] = new Item("lock", 400, 200, 100, 200, #00FF0A, #FA03EE);
   items[8] = new Item("vaultKey", 600, 200, 100, 200, #00FF0A, #FA03EE);
   items[9] = new Item("goblet", 800, 200, 100, 200, #00FF0A, #FA03EE);
@@ -34,16 +34,13 @@ void setup() {
   play = false;
   openInventory = false;
   openSpellBook = false;
-  
-  
 }
 void draw() {
   // Gameplay
   if (!play) {
     startScreen();
-    infoPanel();
   } else {
-    background(#050505);
+    background(128);
     infoPanel();
     if (openInventory==true) {
       inventory.display();
@@ -77,23 +74,17 @@ void keyPressed() {
 void startScreen() {
   background(255);
   StartScreen = loadImage("Start Screen-1.png.png");
-  image(StartScreen, 0, 0, 1000, 950);
-  
+  image(StartScreen, 0, 0, 1000, 998);
+
   if (mousePressed) {
     play = true;
   }
 }
 void infoPanel() {
   //Probably has bad parameters, will edit later
-  fill(#E80C0C);
+  fill(#C2CB5C);
   noStroke();
   rectMode(CORNER);
-  rect(0, height-50, width, 50);
+  rect(20, 20, 350, height-300);
   fill(255);
-  textSize(15);
-  text("Press I to open Inventory and S to open SpellBook", 50, height-20);
 }
-
-  
-
-  
