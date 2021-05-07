@@ -2,9 +2,7 @@ Item[] items = new Item[10];
 Spell[] spells = new Spell[10];
 Inventory inventory;
 SpellBook spellbook;
-boolean play;
-boolean openInventory;
-boolean openSpellBook;
+boolean play, openInventory, openSpellBook, displaySpells, displayItems;
 PImage StartScreen;
 
 void setup() {
@@ -34,13 +32,16 @@ void setup() {
   play = false;
   openInventory = false;
   openSpellBook = false;
+  displaySpells = false;
+  displayItems = false;
 }
 void draw() {
   // Gameplay
   if (!play) {
     startScreen();
+    infoPanel();
   } else {
-    background(128);
+    background(#050505);
     infoPanel();
     if (openInventory==true) {
       inventory.display();
@@ -48,11 +49,15 @@ void draw() {
     if (openSpellBook==true) {
       spellbook.display();
     }
-    for (int i=0; i<items.length; i++) {
-      items[i].display();
+    if (displayItems == true) {
+      for (int i=0; i<items.length; i++) {
+        items[i].display();
+      }
     }
-    for (int i=0; i<items.length; i++) {
-      spells[i].display();
+    if (displaySpells == true) {
+      for (int i=0; i<items.length; i++) {
+        spells[i].display();
+      }
     }
   }
 }
@@ -62,13 +67,17 @@ void mousePressed() {
 void keyPressed() {
   if (key == 'I' || key== 'i') {
     openInventory = true;
+    displayItems = true;
   } else {
     openInventory = false;
+    displayItems = false;
   }
   if (key == 'S'|| key=='s') {
     openSpellBook = true;
+    displaySpells = true;
   } else {
     openSpellBook = false;
+    displaySpells = false;
   }
 }
 void startScreen() {
