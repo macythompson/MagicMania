@@ -18,19 +18,20 @@ class BackGround {
   }
 
   //Member Methods
-
-  void display() {
+  void dialogue() {
     if (dialogueOne == true) {
-      fill(120);
-      text(dialogue1, 600, 600);
-    } else if (dialogueOne == false) {
-      text("Not dialogue", 600, 600);
-    } else if (dialogueTwo == true) {
-      text(dialogue2, 600, 600);
-    } else if (dialogueTwo == false) {
-      text("Not dialogue", 600, 600);
+      fill(255,0,0);
+      text(dialogue1, 400, 600);
+    } else if(dialogueOne == false) {
+      text("", 800, 800);
+    } 
+    if (dialogueTwo == true) {
+      fill(255,0,0);
+      text(dialogue2, 400, 600);
+    } else if(dialogueTwo == false) {
+      text("", 800, 800);
     }
   }
-  //  void changeLocation() {
-  //  }
+  void display() {
+  }
 }
