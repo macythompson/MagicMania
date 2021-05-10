@@ -1,5 +1,6 @@
 Item[] items = new Item[10];
 Spell[] spells = new Spell[10];
+BackGround[] backgrounds = new BackGround[2];
 Inventory inventory;
 SpellBook spellbook;
 boolean play, openInventory, openSpellBook, displaySpells, displayItems;
@@ -9,6 +10,8 @@ void setup() {
   size(1000, 1000);
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
+  backgrounds[0] = new BackGround(300, 300, "Home", "Welcome to the game! Your mother is sick and you need to save her!");
+  backgrounds[1] = new BackGround(300, 300, "outside", "find the things you need.");
   items[0] = new Item("Spell Book", 0, 100, 100, 200, #00FF0A, #FA03EE, "You need a book to cast spells? I just memorize them");
   items[1] = new Item("Locket", 200, 100, 100, 200, #00FF0A, #FA03EE, "Useless starter item");
   items[2] = new Item("BullySpells", 400, 100, 100, 200, #00FF0A, #FA03EE, "Why you accept item from a bully??");
@@ -41,7 +44,7 @@ void draw() {
     startScreen();
     infoPanel();
   } else {
-    background(#050505);
+    backgrounds[0].display();
     infoPanel();
     if (openInventory==true) {
       inventory.display();
