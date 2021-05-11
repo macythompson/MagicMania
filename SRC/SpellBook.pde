@@ -11,15 +11,14 @@ class SpellBook {
   }
   //memeber methods
   void display() {
-    //trying to set up parameters, should take up left half of screen
-    stroke(#9E40E3);
     strokeWeight(20);
-    fill(#DBE87C);
-    rect(250, height-750, 500, 500);
+    fill(c);
+    rect(20, 20, 350, height-300);
+    fill(0,0,255);
+    text("SpellBook",100,100);
   }
   void addSpell() {
   }
   void castSpell() {
   }
 }
-
