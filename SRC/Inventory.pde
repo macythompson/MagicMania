@@ -13,7 +13,9 @@ class Inventory {
     stroke(#9E40E3);
     strokeWeight(20);
     fill(c);
-    rect(250, height-750, 500, 500);
+    rect(20, 20, 350, height-300);
+    fill(0,0,255);
+    text("Inventory",100,100);
   }
   void addItem() {
   }
