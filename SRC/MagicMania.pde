@@ -3,7 +3,7 @@ Spell[] spells = new Spell[10];
 BackGround[] backgrounds = new BackGround[2];
 Inventory inventory;
 SpellBook spellbook;
-boolean play, openInventory, openSpellBook, displaySpells, displayItems;
+boolean play, openInventory, openSpellBook, clickedJump, displayJump, displayLocket;
 PImage StartScreen;
 
 void setup() {
@@ -11,7 +11,7 @@ void setup() {
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Home", "Welcome to the game! Your mother is sick and you need to save her! \n Press enter to continue", "Talk to your mother? A - Yes B - No", true, false);
-  backgrounds[1] = new BackGround(300, 300, "outside", "find the things you need.\n Press p to continue", "You FOOL!! \n press enter to go back and rethink your decision", false, false);
+  backgrounds[1] = new BackGround(300, 300, "outside", "find the things you need.\n Press Jump in the SpellBook to continue", "You FOOL!! \n press enter to go back and rethink your decision", false, false);
   items[0] = new Item("Spell Book", 0, 100, 100, 200, #00FF0A, #FA03EE, "You need a book to cast spells? I just memorize them");
   items[1] = new Item("Locket", 200, 100, 100, 200, #00FF0A, #FA03EE, "Useless starter item");
   items[2] = new Item("BullySpells", 400, 100, 100, 200, #00FF0A, #FA03EE, "Why you accept item from a bully??");
@@ -35,21 +35,39 @@ void setup() {
   play = false;
   openInventory = false;
   openSpellBook = false;
-  displaySpells = false;
-  displayItems = false;
+  displayJump = false;
+  clickedJump = false;
+  displayLocket = false;
 }
 void draw() {
   // Gameplay
   if (!play) {
     startScreen();
-    infoPanel();
   } else {
     background(255);
     infoPanel();
+    //Item, Spell, Inventory, and SpellBook displays
+    if (openInventory==true) {
+      inventory.display();
+    }
+    if (openSpellBook==true) {
+      spellbook.display();
+    }
+    if (displayJump == true && openSpellBook == true) {
+      spells[0].display();
+      spells[0].hover();
+    }
+    if (displayLocket == true && openInventory == true) {
+      items[0].display();
+      items[0].hover();
+    }
+
+    //STORY SEQUENCE
     for (int i=0; i<backgrounds.length; i++) {
       backgrounds[i].dialogue();
     }
     if (key == ENTER || key == RETURN) {
+      displayJump = true;
       backgrounds[0].dialogueOne = false;
       backgrounds[0].dialogueTwo = true;
       backgrounds[1].dialogueTwo = false;
@@ -62,50 +80,30 @@ void draw() {
       backgrounds[0].dialogueTwo = false;
       backgrounds[1].dialogueTwo = true;
     }
-    if (key == 'p') {
+    if (clickedJump == true) {
+      displayLocket = true;
       backgrounds[1].dialogueOne = false;
       backgrounds[0].dialogueOne = true;
-    }
-    
-    
-    
-    
-    if (openInventory==true) {
-      inventory.display();
-    }
-    if (openSpellBook==true) {
-      spellbook.display();
-    }
-    if (displayItems == true) {
-      for (int i=0; i<items.length; i++) {
-        items[i].display();
-      }
-    }
-    if (displaySpells == true) {
-      for (int i=0; i<items.length; i++) {
-        spells[i].display();
-      }
     }
   }
 }
 void mousePressed() {
-  //what is this for again?? clicking characters, places, items and spells?
+  if (spells[0].over) {
+    clickedJump = true;
+  }
 }
 void keyPressed() {
-
   if (key == 'I' || key == 'i') {
     openInventory = true;
-    displayItems = true;
-  } else {
+    openSpellBook = false;
+  } 
+  if (key == 'e' || key == 'E') {
     openInventory = false;
-    displayItems = false;
+    openSpellBook = false;
   }
   if (key == 'S'|| key == 's') {
     openSpellBook = true;
-    displaySpells = true;
-  } else {
-    openSpellBook = false;
-    displaySpells = false;
+    openInventory = false;
   }
 }
 void startScreen() {
@@ -124,7 +122,7 @@ void infoPanel() {
   rect(20, 20, 350, height-300);
   fill(255);
   textSize(20);
-  text("Press i to open Inventory \n Press s to open SpellBook", 100, 100);
+  text("Press I to open Inventory \n Press S to open SpellBook \n Press E to go back to \n play screen", 100, 100);
 }
 
 
