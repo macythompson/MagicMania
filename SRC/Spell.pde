@@ -22,7 +22,7 @@ class Spell {
     if (over) {
       fill(c1);
       textSize(30);
-      text(description, 0, 800);
+      text(description, 100, 800);
     } else {
       fill(c2);
     }
@@ -31,8 +31,12 @@ class Spell {
     fill(255, 0, 0);
     textSize(15);
     text(name, x+30, y+50);
-    over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
   }
+  
+  void hover() {
+    over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
+  } 
+  
   void spellFunction() {
     switch(spell) {
     case 0: // SpellBook
