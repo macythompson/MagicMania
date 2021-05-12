@@ -17,8 +17,4 @@ class SpellBook {
     fill(0,0,255);
     text("SpellBook",100,100);
   }
-  void addSpell() {
-  }
-  void castSpell() {
-  }
 }
