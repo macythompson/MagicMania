@@ -1,7 +1,7 @@
 class Spell {
   //member variables
   String name, description;
-  int spell, x, y, h, w;
+  int x, y, h, w;
   color c1, c2;
   boolean over;
   //constructor
@@ -14,7 +14,6 @@ class Spell {
     this.c1 = c1;
     this.c2 = c2;
     this.description = description;
-    spell = int(random(9));
   }
   //member methods
   void display() {
@@ -32,34 +31,8 @@ class Spell {
     textSize(15);
     text(name, x+30, y+50);
   }
-  
+
   void hover() {
     over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
-  } 
-  
-  void spellFunction() {
-    switch(spell) {
-    case 0: // SpellBook
-
-      break;
-    case 1: // locket
-      break;
-    case 2: // bully spells
-      break;
-    case 3: // knight key
-      break;
-    case 4: // lockpick note
-      break;
-    case 5: // chamber key
-      break;
-    case 6: // chains
-      break;
-    case 7: // lock
-      break;
-    case 8: // vault key
-      break;
-    case 9: // goblet
-      break;
-    }
   }
 }
