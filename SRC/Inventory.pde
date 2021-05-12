@@ -17,10 +17,4 @@ class Inventory {
     fill(0,0,255);
     text("Inventory",100,100);
   }
-  void addItem() {
-  }
-  void useItem() {
-  }
-  void discardItem() {
-  }
 }
