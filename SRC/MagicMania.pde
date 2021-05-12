@@ -3,7 +3,9 @@ Spell[] spells = new Spell[10];
 BackGround[] backgrounds = new BackGround[2];
 Inventory inventory;
 SpellBook spellbook;
-boolean play, openInventory, openSpellBook, clickedJump, displayJump, displayLocket;
+boolean play, openInventory, openSpellBook;
+boolean clickedJump, displayJump;
+boolean displayLocket;
 PImage StartScreen;
 
 void setup() {
@@ -12,26 +14,26 @@ void setup() {
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Home", "Welcome to the game! Your mother is sick and you need to save her! \n Press enter to continue", "Talk to your mother? A - Yes B - No", true, false);
   backgrounds[1] = new BackGround(300, 300, "outside", "find the things you need.\n Press Jump in the SpellBook to continue", "You FOOL!! \n press enter to go back and rethink your decision", false, false);
-  items[0] = new Item("Spell Book", 0, 100, 100, 200, #00FF0A, #FA03EE, "You need a book to cast spells? I just memorize them");
-  items[1] = new Item("Locket", 200, 100, 100, 200, #00FF0A, #FA03EE, "Useless starter item");
-  items[2] = new Item("BullySpells", 400, 100, 100, 200, #00FF0A, #FA03EE, "Why you accept item from a bully??");
-  items[3] = new Item("Knight Key", 600, 100, 100, 200, #00FF0A, #FA03EE, "Use this as a weapon to open people's minds...");
-  items[4] = new Item("Lockpick Note", 800, 100, 100, 200, #00FF0A, #FA03EE, "Guess you don't need keys anymore");
-  items[5] = new Item("Chamber Key", 0, 200, 100, 200, #00FF0A, #FA03EE, "Key to a door that you can't lockpick for some reason");
-  items[6] = new Item("Chains", 200, 200, 100, 200, #00FF0A, #FA03EE, "No idea why you would need these");
-  items[7] = new Item("Lock", 400, 200, 100, 200, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, not lock em up again");
-  items[8] = new Item("Vault Key", 600, 200, 100, 200, #00FF0A, #FA03EE, "Another fine addition to your key collection");
-  items[9] = new Item("Goblet", 800, 200, 100, 200, #00FF0A, #FA03EE, "Congrats! You beat the game!!!");
-  spells[0] = new Spell("Jump", 0, 300, 100, 200, #0FEDFF, #0024FF, "The most basic move, and yet you need a spell for it");
-  spells[1] = new Spell("Fire", 200, 300, 100, 200, #0FEDFF, #0024FF, "That starter spell that everyone spams throughout the game");
-  spells[2] = new Spell("Pierce", 400, 300, 100, 200, #0FEDFF, #0024FF, "Ha Ha sword goes stab stab");
-  spells[3] = new Spell("Distract", 600, 300, 100, 200, #0FEDFF, #0024FF, "Insert Henry Stickman reference");
-  spells[4] = new Spell("Snatch", 800, 300, 100, 200, #0FEDFF, #0024FF, "How to be a theif 101");
-  spells[5] = new Spell("Lockpick", 0, 400, 100, 200, #0FEDFF, #0024FF, "How to be a criminal 101");
-  spells[6] = new Spell("Freeze", 200, 400, 100, 200, #0FEDFF, #0024FF, "Another spell for you to spam");
-  spells[7] = new Spell("Blind", 400, 400, 100, 200, #0FEDFF, #0024FF, "Eye penetration");
-  spells[8] = new Spell("Slow", 600, 400, 100, 200, #0FEDFF, #0024FF, "Why use slow when you have freeze?");
-  spells[9] = new Spell("Heal", 800, 400, 100, 200, #0FEDFF, #0024FF, "The only useful spell");
+  items[0] = new Item("Spell Book", 50, 150, 100, 100, #00FF0A, #FA03EE, "You need a book to cast spells? I just memorize them");
+  items[1] = new Item("Locket", 150, 150, 100, 100, #00FF0A, #FA03EE, "Useless starter item");
+  items[2] = new Item("BullySpells", 50, 250, 100, 100, #00FF0A, #FA03EE, "Why you accept item from a bully??");
+  items[3] = new Item("Knight Key", 150, 250, 100, 100, #00FF0A, #FA03EE, "Use this as a weapon to open people's minds...");
+  items[4] = new Item("Lockpick Note", 50, 350, 100, 100, #00FF0A, #FA03EE, "Guess you don't need keys anymore");
+  items[5] = new Item("Chamber Key", 150, 350, 100, 100, #00FF0A, #FA03EE, "Key to a door that you can't lockpick for some reason");
+  items[6] = new Item("Chains", 50, 450, 100, 100, #00FF0A, #FA03EE, "No idea why you would need these");
+  items[7] = new Item("Lock", 150, 450, 100, 100, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, not lock em up again");
+  items[8] = new Item("Vault Key", 50, 550, 100, 100, #00FF0A, #FA03EE, "Another fine addition to your key collection");
+  items[9] = new Item("Goblet", 150, 550, 100, 100, #00FF0A, #FA03EE, "Congrats! You beat the game!!!");
+  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move, and yet you need a spell for it");
+  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell that everyone spams throughout the game");
+  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword goes stab stab");
+  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Insert Henry Stickman reference");
+  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101");
+  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101");
+  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam");
+  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration");
+  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow when you have freeze?");
+  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell");
   play = false;
   openInventory = false;
   openSpellBook = false;
@@ -61,6 +63,16 @@ void draw() {
       items[0].display();
       items[0].hover();
     }
+    //if (openInventory == true) {
+    //  for (int i=0; i<items.length; i++) {
+    //    items[i].display();
+    //  }
+    //}
+    //if (openSpellBook == true) {
+    //  for (int i=0; i<spells.length; i++) {
+    //    spells[i].display();
+    //  }
+    //}
 
     //STORY SEQUENCE
     for (int i=0; i<backgrounds.length; i++) {
