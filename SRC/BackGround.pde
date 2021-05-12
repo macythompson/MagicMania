@@ -21,12 +21,14 @@ class BackGround {
   void dialogue() {
     if (dialogueOne == true) {
       fill(255,0,0);
+      textSize(20);
       text(dialogue1, 100, 900);
     } else if(dialogueOne == false) {
       text("", 800, 800);
     } 
     if (dialogueTwo == true) {
       fill(255,0,0);
+      textSize(20);
       text(dialogue2, 100, 900);
     } else if(dialogueTwo == false) {
       text("", 800, 800);
