@@ -20,8 +20,8 @@ class Spell {
     stroke(0);
     if (over) {
       fill(c1);
-      textSize(30);
-      text(description, 100, 800);
+      textSize(25);
+      text(description, 400, 650);
     } else {
       fill(c2);
     }
@@ -31,8 +31,8 @@ class Spell {
     textSize(15);
     text(name, x+30, y+50);
   }
-
+  
   void hover() {
     over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
-  }
+  } 
 }
