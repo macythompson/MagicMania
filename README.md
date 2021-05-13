@@ -2,7 +2,7 @@
 ## Group Members: Macy Thompson, William Hackett, Kevin Liu
 Macy Thompon Responsibilities: Create Storyboard and design graphics
 
-William Hackett Responsibilities: Programming Background and Character classes and implementing graphics
+William Hackett Responsibilities: Programming Background class and implementing graphics
 
 Kevin Liu Responsibilities: Programming Spells, SpellBook, Item, and Inventory classes  
 
