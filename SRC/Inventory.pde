@@ -15,6 +15,6 @@ class Inventory {
     fill(c);
     rect(20, 20, 350, height-300);
     fill(0,0,255);
-    text("Inventory",100,100);
+    text("Inventory \nPress E to go back to \n play screen",100,0);
   }
 }
