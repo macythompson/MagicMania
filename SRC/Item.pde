@@ -20,8 +20,8 @@ class Item {
     stroke(0);
     if (over) {
       fill(c1);
-      textSize(30);
-      text(description, 100, 800);
+      textSize(25);
+      text(description, 400, 650);
     } else {
       fill(c2);
     }
