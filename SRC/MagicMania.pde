@@ -6,8 +6,6 @@ SpellBook spellbook;
 String LocationName;
 boolean play, openInventory, openSpellBook;
 boolean clickedJump, clickedFire, clickedPierce, clickedDistract, clickedSnatch, clickedLockpick, clickedFreeze, clickedBlind, clickedSlow, clickedHeal;
-boolean displayJump, displayFire, displayPierce, displayDistract, displaySnatch, displayLockpick, displayFreeze, displayBlind, displaySlow, displayHeal;
-boolean displaySpellBook, displayLocket, displayBullySpells, displayKnightKey, displayLockPickNote, displayChamberKey, displayChains, displayLock, displayVaultKey, displayGoblet;
 PImage StartScreen;
 
 void setup() {
@@ -31,41 +29,29 @@ void setup() {
   backgrounds[14] = new BackGround(300, 300, "Throne Room", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[15] = new BackGround(300, 300, "Queen Battle P1", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[16] = new BackGround(300, 300, "QueenBattle P2", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
-  items[0] = new Item("Spell\nBook", 50, 150, 100, 100, #00FF0A, #FA03EE, "You need a book to cast spells? \nI just memorize them");
-  items[1] = new Item("Locket", 150, 150, 100, 100, #00FF0A, #FA03EE, "Useless starter item");
-  items[2] = new Item("Bully\nSpells", 50, 250, 100, 100, #00FF0A, #FA03EE, "Why you accept item \nfrom a bully??");
-  items[3] = new Item("Knight\nKey", 150, 250, 100, 100, #00FF0A, #FA03EE, "Use this as a weapon \nto open people's minds...");
-  items[4] = new Item("Lockpick\nNote", 50, 350, 100, 100, #00FF0A, #FA03EE, "Guess you don't need \nkeys anymore");
-  items[5] = new Item("Chamber\nKey", 150, 350, 100, 100, #00FF0A, #FA03EE, "Key to a door that you can't \nlockpick for some reason");
-  items[6] = new Item("Chains", 50, 450, 100, 100, #00FF0A, #FA03EE, "No idea why you \nwould need these");
-  items[7] = new Item("Lock", 150, 450, 100, 100, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, \nnot lock em up again");
-  items[8] = new Item("Vault\nKey", 50, 550, 100, 100, #00FF0A, #FA03EE, "Another fine addition \nto your key collection");
-  items[9] = new Item("Goblet", 150, 550, 100, 100, #00FF0A, #FA03EE, "Congrats!! \nYou beat the game!!!");
-  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move \nYet you need a spell for it");
-  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell \neveryone spams throughout the game");
-  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword \ngoes stab stab");
-  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Be careful with this one \nYou could also get distracted by it");
-  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101");
-  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101");
-  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam");
-  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration");
-  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow \nwhen you have freeze?");
-  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell");
+  items[0] = new Item("Spell\nBook", 50, 150, 100, 100, #00FF0A, #FA03EE, "You need a book to cast spells? \nI just memorize them", false);
+  items[1] = new Item("Locket", 150, 150, 100, 100, #00FF0A, #FA03EE, "Useless starter item", false);
+  items[2] = new Item("Bully\nSpells", 50, 250, 100, 100, #00FF0A, #FA03EE, "Why you accept item \nfrom a bully??", false);
+  items[3] = new Item("Knight\nKey", 150, 250, 100, 100, #00FF0A, #FA03EE, "Use this as a weapon \nto open people's minds...", false);
+  items[4] = new Item("Lockpick\nNote", 50, 350, 100, 100, #00FF0A, #FA03EE, "Guess you don't need \nkeys anymore", false);
+  items[5] = new Item("Chamber\nKey", 150, 350, 100, 100, #00FF0A, #FA03EE, "Key to a door that you can't \nlockpick for some reason", false);
+  items[6] = new Item("Chains", 50, 450, 100, 100, #00FF0A, #FA03EE, "No idea why you \nwould need these", false);
+  items[7] = new Item("Lock", 150, 450, 100, 100, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, \nnot lock em up again", false);
+  items[8] = new Item("Vault\nKey", 50, 550, 100, 100, #00FF0A, #FA03EE, "Another fine addition \nto your key collection", false);
+  items[9] = new Item("Goblet", 150, 550, 100, 100, #00FF0A, #FA03EE, "Congrats!! \nYou beat the game!!!", false);
+  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move \nYet you need a spell for it", false);
+  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell \neveryone spams throughout the game", false);
+  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword \ngoes stab stab", false);
+  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Be careful with this one \nYou could also get distracted by it", false);
+  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101", false);
+  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101", false);
+  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam", false);
+  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration", false);
+  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow \nwhen you have freeze?", false);
+  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell", false);
   play = false;
   openInventory = false;
   openSpellBook = false;
-
-  //Frick Ton of display Booleans -_-
-  displayJump = false;
-  displayFire = false;
-  displayPierce = false;
-  displayDistract = false;
-  displaySnatch = false;
-  displayLockpick = false;
-  displayFreeze = false;
-  displayBlind = false;
-  displaySlow = false;
-  displayHeal = false;
 
   clickedJump = false;
   clickedFire = false;
@@ -78,16 +64,6 @@ void setup() {
   clickedSlow = false;
   clickedHeal = false;
 
-  displaySpellBook = false;
-  displayLocket = false;
-  displayBullySpells = false;
-  displayKnightKey = false;
-  displayLockPickNote = false;
-  displayChamberKey = false;
-  displayChains = false;
-  displayLock = false;
-  displayVaultKey = false;
-  displayGoblet = false;
   String LocationName = backgrounds[0].locationName;
   this.LocationName = LocationName;
 }
@@ -105,104 +81,22 @@ void draw() {
     if (openSpellBook==true) {
       spellbook.display();
     }
-
-    //Display Spells
-    if (displayJump == true && openSpellBook == true) {
-      spells[0].display();
-      spells[0].hover();
-    }
-    if (displayFire == true && openSpellBook == true) {
-      spells[1].display();
-      spells[1].hover();
-    }
-    if (displayPierce == true && openSpellBook == true) {
-      spells[2].display();
-      spells[2].hover();
-    }
-    if (displayDistract == true && openSpellBook == true) {
-      spells[3].display();
-      spells[3].hover();
-    }
-    if (displaySnatch == true && openSpellBook == true) {
-      spells[4].display();
-      spells[4].hover();
-    }
-    if (displayLockpick == true && openSpellBook == true) {
-      spells[5].display();
-      spells[5].hover();
-    }
-    if (displayFreeze == true && openSpellBook == true) {
-      spells[6].display();
-      spells[6].hover();
-    }
-    if (displayBlind == true && openSpellBook == true) {
-      spells[7].display();
-      spells[7].hover();
-    }
-    if (displaySlow == true && openSpellBook == true) {
-      spells[8].display();
-      spells[8].hover();
-    }
-    if (displayHeal == true && openSpellBook == true) {
-      spells[9].display();
-      spells[9].hover();
-    }
-
-    //Display Items
-    if (displaySpellBook == true && openInventory == true) {
-      items[0].display();
-      items[0].hover();
-    }
-    if (displayLocket == true && openInventory == true) {
-      items[1].display();
-      items[1].hover();
-    }
-    if (displayBullySpells == true && openInventory == true) {
-      items[2].display();
-      items[2].hover();
-    }
-    if (displayKnightKey == true && openInventory == true) {
-      items[3].display();
-      items[3].hover();
-    }
-    if (displayLockPickNote == true && openInventory == true) {
-      items[4].display();
-      items[4].hover();
-    }
-    if (displayChamberKey == true && openInventory == true) {
-      items[5].display();
-      items[5].hover();
-    }
-    if (displayChains == true && openInventory == true) {
-      items[6].display();
-      items[6].hover();
-    }
-    if (displayLock == true && openInventory == true) {
-      items[7].display();
-      items[7].hover();
-    }
-    if (displayVaultKey == true && openInventory == true) {
-      items[8].display();
-      items[8].hover();
-    }
-    if (displayGoblet == true && openInventory == true) {
-      items[9].display();
-      items[9].hover();
-    }
-    //if (openInventory == true) {
-    //  for (int i=0; i<items.length; i++) {
-    //    items[i].display();
-    //  }
-    //}
-    //if (openSpellBook == true) {
-    //  for (int i=0; i<spells.length; i++) {
-    //    spells[i].display();
-    //  }
-    //}
-
+    
     //STORY SEQUENCE
     for (int i=0; i<backgrounds.length; i++) {
       backgrounds[i].dialogue();
+    }
+    if (openInventory == true) {
+      for (int i=0; i<items.length; i++) {
+        items[i].display();
+        items[i].hover();
+      }
+    }
+    if (openSpellBook == true) {
+      for (int i=0; i<items.length; i++) {
+        spells[i].display();
+        spells[i].hover();
+      }
     }
     if (key == ENTER || key == RETURN) {
       backgrounds[0].dialogueOne = false;
@@ -212,7 +106,7 @@ void draw() {
     if (key == 'a') {
       backgrounds[0].dialogueTwo = false;
       backgrounds[0].dialogueFour = true;
-      displayLocket = true;
+      items[1].display = true;
     }
     if (key == 'b') {
       backgrounds[0].dialogueTwo = false;
@@ -228,8 +122,8 @@ void draw() {
     if (key == 'd') {
       backgrounds[1].dialogueTwo = true;
       backgrounds[1].dialogueOne = false;
-      displaySpellBook = true;
-      displayJump = true;
+      items[0].display = true;
+      spells[0].display = true;
     }
     if (key == 'f') {
       backgrounds[1].dialogueThree = true;
@@ -327,8 +221,9 @@ void infoPanel() {
   rect(20, 750, 950, 225);
   fill(255);
   textSize(20);
-  text("WARNING: DO NOT RANDOMLY\n PRESS KEYS\n IT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
+  text("WARNING: DO NOT RANDOMLY \nPRESS KEYS \nOR CLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
+
 
 
 
