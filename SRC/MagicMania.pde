@@ -13,9 +13,9 @@ void setup() {
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her! \n Press enter to continue", "Talk to your mother? A - Yes B - No", "You FOOL!! Your Mother soon dies because you refuse to talk to her \n press enter to go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her. \n Press C to continue", "Blank", true, false, false, false, false);
-  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need.\n D - Desk F - Flower Pot G - Garbage bin", "You find a SpellBook in the Desk \n You look inside it and see only one spell called Jump \n Press H to continue", "Did you really think you could find anything useful in a flower pot \n Press C to go back and look harder", "Theres nothing useful in a garbage bin because everything is trash... like you \n Press C to go back and look harder", "Blank", false, false, false, false, false);
-  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n J - Woods, K - City", "Soon after you enter the woods, you get attacked by wolves, you ran back barely survivng the bite wounds\n Press H to go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there\n Press L to continue", "Blank", "Blank", false, false, false, false, false);
-  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell\n Press N to continue", "Blank", "Blank", "Blank", false, false, false, false, false);
+  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need.\n D - Desk F - Flower Pot G - Garbage bin", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire \n Press H to continue", "Did you really think you could find anything useful in a flower pot \n Press C to go back and look harder", "Theres nothing useful in a garbage bin because everything is trash... like you \n Press C to go back and look harder", "Blank", false, false, false, false, false);
+  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n J - Woods, K - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house\n Press H to go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there\n Press L to continue", "Blank", "Blank", false, false, false, false, false);
+  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell\n Press N to continue (No more code)", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[4] = new BackGround(300, 300, "City", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
@@ -124,6 +124,7 @@ void draw() {
       backgrounds[1].dialogueOne = false;
       items[0].display = true;
       spells[0].display = true;
+      spells[1].display = true;
     }
     if (key == 'f') {
       backgrounds[1].dialogueThree = true;
@@ -223,6 +224,7 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nPRESS KEYS \nOR CLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
+
 
 
 
