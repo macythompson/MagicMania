@@ -5,7 +5,6 @@ Inventory inventory;
 SpellBook spellbook;
 String LocationName;
 boolean play, openInventory, openSpellBook;
-boolean clickedJump, clickedFire, clickedPierce, clickedDistract, clickedSnatch, clickedLockpick, clickedFreeze, clickedBlind, clickedSlow, clickedHeal;
 PImage StartScreen;
 
 void setup() {
@@ -39,30 +38,19 @@ void setup() {
   items[7] = new Item("Lock", 150, 450, 100, 100, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, \nnot lock em up again", false);
   items[8] = new Item("Vault\nKey", 50, 550, 100, 100, #00FF0A, #FA03EE, "Another fine addition \nto your key collection", false);
   items[9] = new Item("Goblet", 150, 550, 100, 100, #00FF0A, #FA03EE, "Congrats!! \nYou beat the game!!!", false);
-  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move \nYet you need a spell for it", false);
-  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell \neveryone spams throughout the game", false);
-  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword \ngoes stab stab", false);
-  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Be careful with this one \nYou could also get distracted by it", false);
-  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101", false);
-  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101", false);
-  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam", false);
-  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration", false);
-  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow \nwhen you have freeze?", false);
-  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell", false);
+  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move \nYet you need a spell for it", false, false);
+  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell \neveryone spams throughout the game", false, false);
+  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword \ngoes stab stab", false, false);
+  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Be careful with this one \nYou could also get distracted by it", false, false);
+  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101", false, false);
+  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101", false, false);
+  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam", false, false);
+  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration", false, false);
+  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow \nwhen you have freeze?", false, false);
+  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell", false, false);
   play = false;
   openInventory = false;
   openSpellBook = false;
-
-  clickedJump = false;
-  clickedFire = false;
-  clickedPierce = false;
-  clickedDistract = false;
-  clickedSnatch = false;
-  clickedLockpick = false;
-  clickedFreeze = false;
-  clickedBlind = false;
-  clickedSlow = false;
-  clickedHeal = false;
 
   String LocationName = backgrounds[0].locationName;
   this.LocationName = LocationName;
@@ -81,8 +69,6 @@ void draw() {
     if (openSpellBook==true) {
       spellbook.display();
     }
-    
-    //STORY SEQUENCE
     for (int i=0; i<backgrounds.length; i++) {
       backgrounds[i].dialogue();
     }
@@ -93,11 +79,13 @@ void draw() {
       }
     }
     if (openSpellBook == true) {
-      for (int i=0; i<items.length; i++) {
+      for (int i=0; i<spells.length; i++) {
         spells[i].display();
         spells[i].hover();
       }
     }
+
+    //Story Sequence
     if (key == ENTER || key == RETURN) {
       backgrounds[0].dialogueOne = false;
       backgrounds[0].dialogueTwo = true;
@@ -153,42 +141,15 @@ void draw() {
       backgrounds[3].dialogueOne = true;
       LocationName = backgrounds[3].locationName;
     }
-    if (clickedJump == true) {
+    if (spells[0].clicked == true) {
       backgrounds[3].dialogueOne = false;
       backgrounds[3].dialogueTwo = true;
     }
   }
 }
 void mousePressed() {
-  if (spells[0].over) {
-    clickedJump = true;
-  }
-  if (spells[1].over) {
-    clickedFire = true;
-  }
-  if (spells[2].over) {
-    clickedPierce = true;
-  }
-  if (spells[3].over) {
-    clickedDistract = true;
-  }
-  if (spells[4].over) {
-    clickedSnatch = true;
-  }
-  if (spells[5].over) {
-    clickedLockpick = true;
-  }
-  if (spells[6].over) {
-    clickedFreeze = true;
-  }
-  if (spells[7].over) {
-    clickedBlind = true;
-  }
-  if (spells[8].over) {
-    clickedSlow = true;
-  }
-  if (spells[9].over) {
-    clickedHeal = true;
+  for (int i=0; i<spells.length; i++) {
+    spells[i].mousePressed();
   }
 }
 void keyPressed() {
