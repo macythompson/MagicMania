@@ -1,7 +1,6 @@
 Item[] items = new Item[10];
 Spell[] spells = new Spell[10];
 BackGround[] backgrounds = new BackGround[17];
-ContinueButton[] contiButtons = new ContinueButton[10];
 Inventory inventory;
 SpellBook spellbook;
 String LocationName;
