@@ -1,6 +1,7 @@
 Item[] items = new Item[10];
 Spell[] spells = new Spell[10];
 BackGround[] backgrounds = new BackGround[17];
+ContinueButton[] contiButtons = new ContinueButton[10];
 Inventory inventory;
 SpellBook spellbook;
 String LocationName;
@@ -28,26 +29,26 @@ void setup() {
   backgrounds[14] = new BackGround(300, 300, "Throne Room", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[15] = new BackGround(300, 300, "Queen Battle P1", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[16] = new BackGround(300, 300, "QueenBattle P2", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
-  items[0] = new Item("Spell\nBook", 50, 150, 100, 100, #00FF0A, #FA03EE, "You need a book to cast spells? \nI just memorize them", false);
-  items[1] = new Item("Locket", 150, 150, 100, 100, #00FF0A, #FA03EE, "Useless starter item", false);
-  items[2] = new Item("Bully\nSpells", 50, 250, 100, 100, #00FF0A, #FA03EE, "Why you accept item \nfrom a bully??", false);
-  items[3] = new Item("Knight\nKey", 150, 250, 100, 100, #00FF0A, #FA03EE, "Use this as a weapon \nto open people's minds...", false);
-  items[4] = new Item("Lockpick\nNote", 50, 350, 100, 100, #00FF0A, #FA03EE, "Guess you don't need \nkeys anymore", false);
-  items[5] = new Item("Chamber\nKey", 150, 350, 100, 100, #00FF0A, #FA03EE, "Key to a door that you can't \nlockpick for some reason", false);
-  items[6] = new Item("Chains", 50, 450, 100, 100, #00FF0A, #FA03EE, "No idea why you \nwould need these", false);
-  items[7] = new Item("Lock", 150, 450, 100, 100, #00FF0A, #FA03EE, "I thought your goal is to unlock doors, \nnot lock em up again", false);
-  items[8] = new Item("Vault\nKey", 50, 550, 100, 100, #00FF0A, #FA03EE, "Another fine addition \nto your key collection", false);
-  items[9] = new Item("Goblet", 150, 550, 100, 100, #00FF0A, #FA03EE, "Congrats!! \nYou beat the game!!!", false);
-  spells[0] = new Spell("Jump", 50, 150, 100, 100, #0FEDFF, #0024FF, "The most basic move \nYet you need a spell for it", false, false);
-  spells[1] = new Spell("Fire", 150, 150, 100, 100, #0FEDFF, #0024FF, "That starter spell \neveryone spams throughout the game", false, false);
-  spells[2] = new Spell("Pierce", 50, 250, 100, 100, #0FEDFF, #0024FF, "Ha Ha sword \ngoes stab stab", false, false);
-  spells[3] = new Spell("Distract", 150, 250, 100, 100, #0FEDFF, #0024FF, "Be careful with this one \nYou could also get distracted by it", false, false);
-  spells[4] = new Spell("Snatch", 50, 350, 100, 100, #0FEDFF, #0024FF, "How to be a theif 101", false, false);
-  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, #0FEDFF, #0024FF, "How to be a criminal 101", false, false);
-  spells[6] = new Spell("Freeze", 50, 450, 100, 100, #0FEDFF, #0024FF, "Another spell for you to spam", false, false);
-  spells[7] = new Spell("Blind", 150, 450, 100, 100, #0FEDFF, #0024FF, "Eye penetration", false, false);
-  spells[8] = new Spell("Slow", 50, 550, 100, 100, #0FEDFF, #0024FF, "Why use slow \nwhen you have freeze?", false, false);
-  spells[9] = new Spell("Heal", 150, 550, 100, 100, #0FEDFF, #0024FF, "The only useful spell", false, false);
+  items[0] = new Item("Spell\nBook", 50, 150, 100, 100, "You need a book to cast spells? \nI just memorize them", false);
+  items[1] = new Item("Locket", 150, 150, 100, 100, "Useless starter item", false);
+  items[2] = new Item("Bully\nSpells", 50, 250, 100, 100, "Why you accept item \nfrom a bully??", false);
+  items[3] = new Item("Knight\nKey", 150, 250, 100, 100, "Use this as a weapon \nto open people's minds...", false);
+  items[4] = new Item("Lockpick\nNote", 50, 350, 100, 100, "Guess you don't need \nkeys anymore", false);
+  items[5] = new Item("Chamber\nKey", 150, 350, 100, 100, "Key to a door that you can't \nlockpick for some reason", false);
+  items[6] = new Item("Chains", 50, 450, 100, 100, "No idea why you \nwould need these", false);
+  items[7] = new Item("Lock", 150, 450, 100, 100, "I thought your goal is to unlock doors, \nnot lock em up again", false);
+  items[8] = new Item("Vault\nKey", 50, 550, 100, 100, "Another fine addition \nto your key collection", false);
+  items[9] = new Item("Goblet", 150, 550, 100, 100, "Congrats!! \nYou beat the game!!!", false);
+  spells[0] = new Spell("Jump", 50, 150, 100, 100, "The most basic move \nYet you need a spell for it", false, false);
+  spells[1] = new Spell("Fire", 150, 150, 100, 100, "That starter spell \neveryone spams throughout the game", false, false);
+  spells[2] = new Spell("Pierce", 50, 250, 100, 100, "Ha Ha sword \ngoes stab stab", false, false);
+  spells[3] = new Spell("Distract", 150, 250, 100, 100, "Be careful with this one \nYou could also get distracted by it", false, false);
+  spells[4] = new Spell("Snatch", 50, 350, 100, 100, "How to be a theif 101", false, false);
+  spells[5] = new Spell("Lockpick", 150, 350, 100, 100, "How to be a criminal 101", false, false);
+  spells[6] = new Spell("Freeze", 50, 450, 100, 100, "Another spell for you to spam", false, false);
+  spells[7] = new Spell("Blind", 150, 450, 100, 100, "Eye penetration", false, false);
+  spells[8] = new Spell("Slow", 50, 550, 100, 100, "Why use slow \nwhen you have freeze?", false, false);
+  spells[9] = new Spell("Heal", 150, 550, 100, 100, "The only useful spell", false, false);
   play = false;
   openInventory = false;
   openSpellBook = false;
@@ -185,6 +186,7 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nPRESS KEYS \nOR CLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
+
 
 
 
