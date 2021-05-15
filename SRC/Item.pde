@@ -2,17 +2,14 @@ class Item {
   //member variables
   int x, y, h, w;
   String name, description;
-  color c1, c2;
   boolean over, display;
   //constructer
-  Item(String name, int x, int y, int h, int w, color c1, color c2, String description, Boolean display) {
+  Item(String name, int x, int y, int h, int w, String description, Boolean display) {
     this.name = name;
     this.x = x;
     this.y = y;
     this.h = h;
     this.w = w;
-    this.c1 = c1;
-    this.c2 = c2;
     this.description = description;
     this.display = display;
   }
@@ -21,11 +18,11 @@ class Item {
     if (display == true) {
       stroke(0);
       if (over) {
-        fill(c1);
+        fill(#00FF0A);
         textSize(25);
         text(description, 400, 650);
       } else {
-        fill(c2);
+        fill(#FA03EE);
       }
 
       rect(x, y, w, h);
@@ -39,7 +36,6 @@ class Item {
     over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
   }
 }
-
 
 
 
