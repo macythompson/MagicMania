@@ -3,9 +3,9 @@ class Spell {
   String name, description;
   int x, y, h, w;
   color c1, c2;
-  boolean over, display;
+  boolean over, display, clicked;
   //constructor
-  Spell(String name, int x, int y, int h, int w, color c1, color c2, String description, Boolean display) {
+  Spell(String name, int x, int y, int h, int w, color c1, color c2, String description, Boolean display, Boolean clicked) {
     this.name = name;
     this.x = x;
     this.y = y;
@@ -14,6 +14,7 @@ class Spell {
     this.c1 = c1;
     this.c2 = c2;
     this.display = display;
+    this.clicked = clicked;
     this.description = description;
   }
   //member methods
@@ -34,9 +35,13 @@ class Spell {
       text(name, x+30, y+50);
     }
   }
-
   void hover() {
     over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
+  }
+  void mousePressed() {
+    if(over) {
+      clicked = true;
+    }
   }
 }
 
