@@ -2,17 +2,14 @@ class Spell {
   //member variables
   String name, description;
   int x, y, h, w;
-  color c1, c2;
   boolean over, display, clicked;
   //constructor
-  Spell(String name, int x, int y, int h, int w, color c1, color c2, String description, Boolean display, Boolean clicked) {
+  Spell(String name, int x, int y, int h, int w, String description, Boolean display, Boolean clicked) {
     this.name = name;
     this.x = x;
     this.y = y;
     this.h = h;
     this.w = w;
-    this.c1 = c1;
-    this.c2 = c2;
     this.display = display;
     this.clicked = clicked;
     this.description = description;
@@ -22,11 +19,11 @@ class Spell {
     if (display == true) {
       stroke(0);
       if (over) {
-        fill(c1);
+        fill(#0FEDFF);
         textSize(25);
         text(description, 400, 650);
       } else {
-        fill(c2);
+        fill(#0024FF);
       }
 
       rect(x, y, w, h);
@@ -44,4 +41,3 @@ class Spell {
     }
   }
 }
-
