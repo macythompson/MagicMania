@@ -1,18 +1,19 @@
-class Inventory {
+class SpellBook {
   //memeber variables
   int x, y;
   color c;
+  //boolean error, pls fix
+  //boolean recievedSpell(Spell spell) {
+  //}
   //constructor
-  Inventory(color c) {
+  SpellBook(color c) {
     this.c = c;
   }
   //memeber methods
   void display() {
-    stroke(#9E40E3);
-    strokeWeight(20);
     fill(c);
     rect(20, 20, 350, height-300);
     fill(0,0,255);
-    text("Inventory \nPress E to go back to \n play screen",100,50);
+    text("SpellBook \nPress E to go back to \n play screen",100,50);
   }
 }
