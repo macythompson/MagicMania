@@ -1,7 +1,7 @@
 Item[] items = new Item[10];
 Spell[] spells = new Spell[10];
 BackGround[] backgrounds = new BackGround[17];
-ContinueButton[] contiButtons = new ContinueButton[10];
+ContinueButton[] contiButtons = new ContinueButton[18];
 Inventory inventory;
 SpellBook spellbook;
 String LocationName;
@@ -13,14 +13,14 @@ void setup() {
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her!", "Talk to your mother? A - Yes B - No", "\nYou FOOL!! Your Mother soon dies because you refuse to talk to her \n go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her.", true, false, false, false);
-  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Desk B - Garbage bin ", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false);
+  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Garbage bin B - Desk", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false);
   backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false);
-  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell\n Press N to continue (No more code)", "Blank", "Blank", false, false, false, false);
-  backgrounds[4] = new BackGround(300, 300, "City", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
+  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false);
+  backgrounds[4] = new BackGround(300, 300, "City", "You enter the city, you don't know where to start so you ask others for directions \n A - Beggar B - Bully", "\nSDKHDSESK!! says the beggar, you don't quite understand him \nyou try talking with someone else", "Blank", "Blank", false, false, false, false);
+  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "WHAT DO YA WANT!!!!!!!! Says the Bully \n A - Bye B - Hi", "Blank", "Blank", "Blank", false, false, false, false);
   backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
   backgrounds[7] = new BackGround(300, 300, "Battle with Buly P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[8] = new BackGround(300, 300, "Castle", "Blank", "Blank", "Blank", "Blank",, false, false, false, false);
+  backgrounds[8] = new BackGround(300, 300, "Castle", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
   backgrounds[9] = new BackGround(300, 300, "Knight Battle P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
   backgrounds[10] = new BackGround(300, 300, "Knight Battle P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
   backgrounds[11] = new BackGround(300, 300, "Chained Up", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
@@ -33,12 +33,20 @@ void setup() {
   contiButtons[1] = new ContinueButton(200, 900, 50, 100, "A", false, false);
   contiButtons[2] = new ContinueButton(400, 900, 50, 100, "B", false, false);
   contiButtons[3] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[4] = new ContinueButton(200, 900, 50, 100, "A", false, false);
-  contiButtons[5] = new ContinueButton(400, 900, 50, 100, "B", false, false);
+  contiButtons[4] = new ContinueButton(400, 900, 50, 100, "B", false, false);
+  contiButtons[5] = new ContinueButton(200, 900, 50, 100, "A", false, false);
   contiButtons[6] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[7] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[8] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[9] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[9] = new ContinueButton(200, 900, 50, 100, "A", false, false);
+  contiButtons[10] = new ContinueButton(400, 900, 50, 100, "B", false, false);
+  contiButtons[11] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[12] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[13] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[14] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[15] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[16] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[17] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   items[0] = new Item("Spell\nBook", 50, 150, 100, 100, "You need a book to cast spells? \nI just memorize them", false);
   items[1] = new Item("Locket", 150, 150, 100, 100, "Useless starter item", false);
   items[2] = new Item("Bully\nSpells", 50, 250, 100, 100, "Why you accept item \nfrom a bully??", false);
@@ -108,7 +116,7 @@ void draw() {
       contiButtons[0].display = false;
       contiButtons[2].display = true;
       contiButtons[1].display = true;
-    }
+    } 
     if (contiButtons[1].clicked == true) {
       backgrounds[0].dialogueTwo = false;
       backgrounds[0].dialogueFour = true;
@@ -120,7 +128,7 @@ void draw() {
     } else if (contiButtons[2].clicked == true) {
       backgrounds[0].dialogueThree = true;
       contiButtons[2].display = false;
-    }
+    } 
     if (contiButtons[3].clicked == true) {
       backgrounds[0].dialogueTwo = false;
       backgrounds[1].dialogueOne = true;
@@ -132,7 +140,7 @@ void draw() {
       contiButtons[4].display = true;
       contiButtons[5].display = true;
       LocationName = backgrounds[1].locationName;
-    }
+    } 
     if (contiButtons[4].clicked == true) {
       backgrounds[1].dialogueTwo = true;
       backgrounds[1].dialogueOne = false;
@@ -147,15 +155,15 @@ void draw() {
     } else if (contiButtons[5].clicked == true) {
       backgrounds[1].dialogueThree = true;
       backgrounds[1].dialogueFour = false;
-    }
-   if (contiButtons[0].clicked == true) {
+    } 
+    if (contiButtons[0].clicked == true) {
       backgrounds[0].dialogueOne = false;
       backgrounds[0].dialogueTwo = true;
       backgrounds[0].dialogueThree = false;
       contiButtons[0].display = false;
       contiButtons[2].display = true;
       contiButtons[1].display = true;
-    }
+    } 
     if (contiButtons[1].clicked == true) {
       backgrounds[0].dialogueTwo = false;
       backgrounds[0].dialogueFour = true;
@@ -167,7 +175,7 @@ void draw() {
     } else if (contiButtons[2].clicked == true) {
       backgrounds[0].dialogueThree = true;
       contiButtons[2].display = false;
-    }
+    } 
     if (contiButtons[3].clicked == true) {
       backgrounds[0].dialogueTwo = false;
       backgrounds[1].dialogueOne = true;
@@ -179,12 +187,11 @@ void draw() {
       contiButtons[4].display = true;
       contiButtons[5].display = true;
       LocationName = backgrounds[1].locationName;
-    }
+    } 
     if (contiButtons[4].clicked == true) {
       backgrounds[1].dialogueTwo = true;
       backgrounds[1].dialogueOne = false;
       backgrounds[1].dialogueThree = false;
-      backgrounds[1].dialogueFour = false;
       contiButtons[4].display = false;
       contiButtons[5].display = false;
       contiButtons[6].display = true;
@@ -193,31 +200,36 @@ void draw() {
       spells[1].display = true;
     } else if (contiButtons[5].clicked == true) {
       backgrounds[1].dialogueThree = true;
-      backgrounds[1].dialogueFour = false;
-    }
+      contiButtons[5].display = false;
+    } 
     if (contiButtons[6].clicked == true) {
       backgrounds[1].dialogueTwo = false;
-      backgrounds[2].dialogueOne = true;
+      backgrounds[2].dialogueOne = false;
       backgrounds[2].dialogueTwo = false;
-      backgrounds[2].dialogueThree = false;
+      backgrounds[2].dialogueThree = true;
       contiButtons[7].display = true;
       contiButtons[6].display = false;
       LocationName = backgrounds[2].locationName;
-    }
+    } 
     if (contiButtons[7].clicked == true) {
       //backgrounds[2].dialogueOne = false;
       backgrounds[3].dialogueOne = true;
-      backgrounds[2].dialogueOne = false;
+      backgrounds[2].dialogueThree = false;
       contiButtons[7].display = false;
       LocationName = backgrounds[3].locationName;
     } 
     if (spells[0].clicked == true) {
       backgrounds[3].dialogueTwo = true;
       backgrounds[3].dialogueOne = false;
-      contiButtons[9].display = true;
+      contiButtons[8].display = true;
     } 
-    if (contiButtons[9].clicked == true){
+    if (contiButtons[8].clicked == true) {
+      backgrounds[3].dialogueTwo = false;
       backgrounds[4].dialogueOne = true;
+      contiButtons[8].display = false;
+      contiButtons[9].display = true;
+      contiButtons[10].display = true;
+      LocationName = backgrounds[4].locationName;
     }
   }
 }
@@ -249,14 +261,33 @@ void mousePressed() {
   if (contiButtons[7].display == true) {
     contiButtons[7].mousePressed();
   }
-    if (spells[0].clicked == true) {
-      backgrounds[3].dialogueTwo = true;
-      backgrounds[3].dialogueOne = false;
-      contiButtons[9].display = true;
-    } 
-    if (contiButtons[9].clicked == true){
-      backgrounds[4].dialogueOne = true;
-    }
+  if (contiButtons[8].display == true) {
+    contiButtons[8].mousePressed();
+  }
+  if (contiButtons[9].display == true) {
+    contiButtons[9].mousePressed();
+  }
+  if (contiButtons[10].display == true) {
+    contiButtons[10].mousePressed();
+  }
+  if (contiButtons[11].display == true) {
+    contiButtons[11].mousePressed();
+  }
+  if (contiButtons[12].display == true) {
+    contiButtons[12].mousePressed();
+  }
+  if (contiButtons[13].display == true) {
+    contiButtons[13].mousePressed();
+  }
+  if (contiButtons[14].display == true) {
+    contiButtons[14].mousePressed();
+  }
+  if (contiButtons[15].display == true) {
+    contiButtons[15].mousePressed();
+  }
+  if (contiButtons[16].display == true) {
+    contiButtons[16].mousePressed();
+  }
   //for (int i=0; i<contiButtons.length; i++) {
   //  contiButtons[i].mousePressed();
   //}
@@ -290,7 +321,8 @@ void infoPanel() {
   rectMode(CORNER);
   rect(20, 20, 350, height-300);
   rect(20, 750, 950, 225);
-  fill(255);
+  fill(255, 0, 0);
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nCLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nAll Buttons can only be \nclicked once \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
+
