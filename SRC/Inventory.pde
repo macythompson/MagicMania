@@ -2,8 +2,6 @@ class Inventory {
   //memeber variables
   int x, y;
   color c;
-  //boolean takenItem(Item item) {
-  //}
   //constructor
   Inventory(color c) {
     this.c = c;
