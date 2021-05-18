@@ -2,12 +2,12 @@ class BackGround {
 
   //Member Variables
   int x, y;
-  String locationName, dialogue1, dialogue2, dialogue3, dialogue4, dialogue5;
+  String locationName, dialogue1, dialogue2, dialogue3, dialogue4;
   PImage photo;
-  boolean dialogueOne, dialogueTwo, dialogueThree, dialogueFour, dialogueFive;
+  boolean dialogueOne, dialogueTwo, dialogueThree, dialogueFour;
 
   //Constructor
-  BackGround(int x, int y, String locationName, String dialogue1, String dialogue2, String dialogue3, String dialogue4, String dialogue5, Boolean dialogueOne, Boolean dialogueTwo, Boolean dialogueThree, Boolean dialogueFour, Boolean dialogueFive) {
+  BackGround(int x, int y, String locationName, String dialogue1, String dialogue2, String dialogue3, String dialogue4, Boolean dialogueOne, Boolean dialogueTwo, Boolean dialogueThree, Boolean dialogueFour) {
     this.x = x;
     this.y = y;
     this.locationName = locationName;
@@ -15,12 +15,10 @@ class BackGround {
     this.dialogue2 = dialogue2;
     this.dialogue3 = dialogue3;
     this.dialogue4 = dialogue4;
-    this.dialogue5 = dialogue5;
     this.dialogueOne = dialogueOne;
     this.dialogueTwo = dialogueTwo;
     this.dialogueThree = dialogueThree;
     this.dialogueFour = dialogueFour;
-    this.dialogueFive = dialogueFive;
   }
 
   //Member Methods
@@ -51,13 +49,6 @@ class BackGround {
       textSize(20);
       text(dialogue4, 100, 800);
     } else if(dialogueFour == false) {
-      text("", 800, 800);
-    }
-    if (dialogueFive == true) {
-      fill(255,0,0);
-      textSize(20);
-      text(dialogue5, 100, 800);
-    } else if(dialogueFive == false) {
       text("", 800, 800);
     }
   }
