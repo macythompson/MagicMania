@@ -16,6 +16,7 @@ class BackGround {
     this.dialogue2 = dialogue2;
     this.dialogue3 = dialogue3;
     this.dialogue4 = dialogue4;
+    this.dialogueOne = dialogueOne;
     this.dialogueTwo = dialogueTwo;
     this.dialogueThree = dialogueThree;
     this.dialogueFour = dialogueFour;
