@@ -13,7 +13,7 @@ void setup() {
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her!", "Talk to your mother? A - Yes B - No", "\nYou FOOL!! Your Mother soon dies because you refuse to talk to her \n go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her.", "Blank", true, false, false, false, false);
-  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Desk B - Flower Pot C - Garbage bin", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nDid you really think you could find anything useful in a flower pot \n go back and look harder", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false, false);
+  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Desk B - Garbage bin ", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", "Blank", false, false, false, false, false);
   backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", "Blank", false, false, false, false, false);
   backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell\n Press N to continue (No more code)", "Blank", "Blank", "Blank", false, false, false, false, false);
   backgrounds[4] = new BackGround(300, 300, "City", "Blank", "Blank", "Blank", "Blank", "Blank", false, false, false, false, false);
@@ -35,7 +35,7 @@ void setup() {
   contiButtons[3] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[4] = new ContinueButton(200, 900, 50, 100, "A", false, false);
   contiButtons[5] = new ContinueButton(400, 900, 50, 100, "B", false, false);
-  contiButtons[6] = new ContinueButton(600, 900, 50, 100, "C", false, false);
+  contiButtons[6] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[7] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[8] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[9] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
@@ -131,7 +131,6 @@ void draw() {
       contiButtons[1].display = false;
       contiButtons[4].display = true;
       contiButtons[5].display = true;
-      contiButtons[6].display = true;
       LocationName = backgrounds[1].locationName;
     }
     if (contiButtons[4].clicked == true) {
@@ -148,9 +147,6 @@ void draw() {
     } else if (contiButtons[5].clicked == true) {
       backgrounds[1].dialogueThree = true;
       backgrounds[1].dialogueFour = false;
-    } else if (contiButtons[6].clicked == true) {
-      backgrounds[1].dialogueFour = true;
-      backgrounds[1].dialogueThree = false;
     }
     if (key == 'h') {
       backgrounds[1].dialogueTwo = false;
@@ -242,10 +238,6 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nCLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nAll Buttons can only be \nclicked once \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
-
-
-
-
 
 
 
