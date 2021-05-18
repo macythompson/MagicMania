@@ -8,11 +8,9 @@ class SpellBook {
   }
   //memeber methods
   void display() {
-    stroke(#9E40E3);
-    strokeWeight(20);
     fill(c);
     rect(20, 20, 350, height-300);
-    fill(0, 0, 255);
-    text("SpellBook \nPress E to go back to \n play screen", 100, 50);
+    fill(0,0,255);
+    text("SpellBook \nPress E to go back to \n play screen",100,50);
   }
 }
