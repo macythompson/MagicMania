@@ -148,28 +148,76 @@ void draw() {
       backgrounds[1].dialogueThree = true;
       backgrounds[1].dialogueFour = false;
     }
-    if (key == 'h') {
+   if (contiButtons[0].clicked == true) {
+      backgrounds[0].dialogueOne = false;
+      backgrounds[0].dialogueTwo = true;
+      backgrounds[0].dialogueThree = false;
+      contiButtons[0].display = false;
+      contiButtons[2].display = true;
+      contiButtons[1].display = true;
+    }
+    if (contiButtons[1].clicked == true) {
+      backgrounds[0].dialogueTwo = false;
+      backgrounds[0].dialogueFour = true;
+      backgrounds[0].dialogueThree = false;
+      contiButtons[1].display = false;
+      contiButtons[2].display = false;
+      contiButtons[3].display = true;
+      items[1].display = true;
+    } else if (contiButtons[2].clicked == true) {
+      backgrounds[0].dialogueThree = true;
+      contiButtons[2].display = false;
+    }
+    if (contiButtons[3].clicked == true) {
+      backgrounds[0].dialogueTwo = false;
+      backgrounds[1].dialogueOne = true;
+      backgrounds[0].dialogueFour = false;
+      backgrounds[1].dialogueThree = false;
+      backgrounds[1].dialogueFour = false;
+      contiButtons[3].display = false;  
+      contiButtons[1].display = false;
+      contiButtons[4].display = true;
+      contiButtons[5].display = true;
+      LocationName = backgrounds[1].locationName;
+    }
+    if (contiButtons[4].clicked == true) {
+      backgrounds[1].dialogueTwo = true;
+      backgrounds[1].dialogueOne = false;
+      backgrounds[1].dialogueThree = false;
+      backgrounds[1].dialogueFour = false;
+      contiButtons[4].display = false;
+      contiButtons[5].display = false;
+      contiButtons[6].display = true;
+      items[0].display = true;
+      spells[0].display = true;
+      spells[1].display = true;
+    } else if (contiButtons[5].clicked == true) {
+      backgrounds[1].dialogueThree = true;
+      backgrounds[1].dialogueFour = false;
+    }
+    if (contiButtons[6].clicked == true) {
       backgrounds[1].dialogueTwo = false;
       backgrounds[2].dialogueOne = true;
       backgrounds[2].dialogueTwo = false;
+      backgrounds[2].dialogueThree = false;
+      contiButtons[7].display = true;
+      contiButtons[6].display = false;
       LocationName = backgrounds[2].locationName;
     }
-    if (key == 'j') {
-      backgrounds[2].dialogueOne = false;
-      backgrounds[2].dialogueTwo = true;
-    }
-    if (key == 'k') {
-      backgrounds[2].dialogueOne = false;
-      backgrounds[2].dialogueThree = true;
-    }
-    if (key == 'l') {
-      backgrounds[2].dialogueThree = false;
+    if (contiButtons[7].clicked == true) {
+      //backgrounds[2].dialogueOne = false;
       backgrounds[3].dialogueOne = true;
+      backgrounds[2].dialogueOne = false;
+      contiButtons[7].display = false;
       LocationName = backgrounds[3].locationName;
-    }
+    } 
     if (spells[0].clicked == true) {
-      backgrounds[3].dialogueOne = false;
       backgrounds[3].dialogueTwo = true;
+      backgrounds[3].dialogueOne = false;
+      contiButtons[9].display = true;
+    } 
+    if (contiButtons[9].clicked == true){
+      backgrounds[4].dialogueOne = true;
     }
   }
 }
@@ -201,6 +249,14 @@ void mousePressed() {
   if (contiButtons[7].display == true) {
     contiButtons[7].mousePressed();
   }
+    if (spells[0].clicked == true) {
+      backgrounds[3].dialogueTwo = true;
+      backgrounds[3].dialogueOne = false;
+      contiButtons[9].display = true;
+    } 
+    if (contiButtons[9].clicked == true){
+      backgrounds[4].dialogueOne = true;
+    }
   //for (int i=0; i<contiButtons.length; i++) {
   //  contiButtons[i].mousePressed();
   //}
