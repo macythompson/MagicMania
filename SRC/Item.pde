@@ -1,3 +1,5 @@
+//By Macy and Kevin
+
 class Item {
   //member variables
   int x, y, h, w;
