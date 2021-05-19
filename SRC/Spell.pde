@@ -1,3 +1,5 @@
+//By Kevin and William
+
 class Spell {
   //member variables
   String name, description;
