@@ -1,3 +1,5 @@
+//By Kevin 
+
 class Inventory {
   //memeber variables
   int x, y;
