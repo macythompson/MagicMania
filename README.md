@@ -6,7 +6,7 @@ William Hackett Responsibilities: Programming Background class and implementing 
 
 Kevin Liu Responsibilities: Programming Spells, SpellBook, Item, Inventory and Button classes  
 
-![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/FinalProjectClassDiagram.pdf)
+![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/Updated%20MagicMania%20UML.PNG?raw=true)
 
 ![Magic Mania Graphics](https://github.com/macythompson/MagicMania/blob/main/Images/IMG_2131.jpg?raw=true)
 
