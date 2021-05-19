@@ -4,7 +4,7 @@ Macy Thompon Responsibilities: Create Storyboard and design graphics
 
 William Hackett Responsibilities: Programming Background class and implementing graphics
 
-Kevin Liu Responsibilities: Programming Spells, SpellBook, Item, and Inventory classes  
+Kevin Liu Responsibilities: Programming Spells, SpellBook, Item, Inventory and Button classes  
 
 ![Magic Mania UML](https://github.com/macythompson/MagicMania/blob/main/Images/FinalProjectClassDiagram.pdf)
 
