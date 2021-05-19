@@ -1,3 +1,5 @@
+//By Kevin
+
 class SpellBook {
   //memeber variables
   int x, y;
