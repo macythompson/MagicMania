@@ -1,3 +1,5 @@
+//By William and Macy
+
 class BackGround {
 
   //Member Variables
