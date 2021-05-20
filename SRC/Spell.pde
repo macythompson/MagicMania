@@ -40,6 +40,7 @@ class Spell {
   void mousePressed() {
     if(over) {
       clicked = true;
+      openSpellBook = false;
     }
   }
 }
