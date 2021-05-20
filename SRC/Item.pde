@@ -20,7 +20,7 @@ class Item {
     if (display == true) {
       stroke(0);
       if (over) {
-        fill(#00FF0A);
+        fill(0);
         textSize(25);
         text(description, 400, 650);
       } else {
@@ -28,7 +28,7 @@ class Item {
       }
 
       rect(x, y, w, h);
-      fill(0);
+      fill(255);
       textSize(15);
       text(name, x+30, y+50);
     }
@@ -38,6 +38,8 @@ class Item {
     over = (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h);
   }
 }
+
+
 
 
 
