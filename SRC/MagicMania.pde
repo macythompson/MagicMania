@@ -40,9 +40,9 @@ void setup() {
   contiButtons[6] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[7] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[8] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[9] = new ContinueButton(200, 900, 50, 100, "A", false, false);
+  contiButtons[9] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[10] = new ContinueButton(400, 900, 50, 100, "B", false, false);
-  contiButtons[11] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[11] = new ContinueButton(200, 900, 50, 100, "A", false, false);
   contiButtons[12] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[13] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[14] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
@@ -241,6 +241,15 @@ void draw() {
       contiButtons[10].display = true;
       contiButtons[11].display = true;
       contiButtons[9].display = false; 
+      } 
+      if (contiButtons[11].clicked == true) {
+      backgrounds[4].dialogueFour = true;
+      backgrounds[4].dialogueThree = false;
+      contiButtons[10].display = false;
+      contiButtons[11].display = false;
+     } else if (contiButtons[10].clicked == true){
+      backgrounds[4].dialogueThree = true;
+      contiButtons[10].display = false;
     }
   }
 }
