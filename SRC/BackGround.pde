@@ -57,6 +57,6 @@ class BackGround {
     }
   }
   void display() {
-    image(photo, 400, 400, 400, 400);
+    image(photo, 390, 20, 600, 600);
   } 
 }
