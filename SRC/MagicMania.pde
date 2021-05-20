@@ -234,6 +234,7 @@ void draw() {
       contiButtons[8].display = false;
       contiButtons[9].display = true;
       LocationName = backgrounds[4].locationName;
+      backgrounds[4].display();
     }
     if (contiButtons[9].clicked == true) {
       backgrounds[4].dialogueOne = false;
@@ -345,5 +346,4 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nCLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nAll Buttons can only be \nclicked once \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
-
 
