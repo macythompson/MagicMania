@@ -8,18 +8,18 @@ Inventory inventory;
 SpellBook spellbook;
 String LocationName;
 boolean play, openInventory, openSpellBook;
-//PImage StartScreen;
+PImage StartScreen;
 
 void setup() {
   size(1000, 1000);
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
   backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her!", "Talk to your mother? A - Yes B - No", "\nYou FOOL!! Your Mother soon dies because you refuse to talk to her \n go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her.", true, false, false, false, "#1 bcgnd-1.png.png");
-  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Garbage bin B - Desk", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false);
-  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false,  "#1 bcgnd-1.png.png");
-  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
-  backgrounds[4] = new BackGround(300, 300, "City", "You come upon a grey, ugly city. You probably need something here", "You see a suspicious note on the ground, pick it up? A-Yes B-No", "\n Why wouldn't you want to pick it up? I thought you'd love that kind of thing, try again", "\nThere you go on the not you obtained Pierce, Distract and Snatch", false, false, false, false, "#1 bcgnd-1.png.png");
-  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "HEY!!!!!!!! Says the Bully \n A - Bye B - Hi", "YOU HAVE MY SPELLS, I'm gonna need those back...", "I don't want any cowards plaing this game, go talk to him...", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Garbage bin B - Desk", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false, "#2 bcgnd-1.png.png");
+  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false,  "#3 bcgnd-1.png.png");
+  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false, "#4 bcgnd-1.png.png");
+  backgrounds[4] = new BackGround(300, 300, "City", "You enter the city, you don't know where to start so you ask others for directions \n A - Beggar B - Bully", "\n\nSDKHDSESK!! says the beggar, you don't quite understand him \nyou try talking with someone else", "Blank", "Blank", false, false, false, false, "#5 bcgnd-1.png.png");
+  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "WHAT DO YA WANT!!!!!!!! Says the Bully \n A - Bye B - Hi", "Blank", "Blank", "Blank", false, false, false, false, "#6 background-1.png.png");
   backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
   backgrounds[7] = new BackGround(300, 300, "Battle with Buly P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
   backgrounds[8] = new BackGround(300, 300, "Castle", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
@@ -142,6 +142,7 @@ void draw() {
       contiButtons[1].display = false;
       contiButtons[4].display = true;
       contiButtons[5].display = true;
+      backgrounds[1].display();
       LocationName = backgrounds[1].locationName;
     } 
     if (contiButtons[4].clicked == true) {
@@ -189,7 +190,6 @@ void draw() {
       contiButtons[1].display = false;
       contiButtons[4].display = true;
       contiButtons[5].display = true;
-      LocationName = backgrounds[1].locationName;
     } 
     if (contiButtons[4].clicked == true) {
       backgrounds[1].dialogueTwo = true;
@@ -212,6 +212,7 @@ void draw() {
       backgrounds[2].dialogueThree = true;
       contiButtons[7].display = true;
       contiButtons[6].display = false;
+      backgrounds[2].display();
       LocationName = backgrounds[2].locationName;
     } 
     if (contiButtons[7].clicked == true) {
@@ -219,6 +220,7 @@ void draw() {
       backgrounds[3].dialogueOne = true;
       backgrounds[2].dialogueThree = false;
       contiButtons[7].display = false;
+      backgrounds[3].display();
       LocationName = backgrounds[3].locationName;
     } 
     if (spells[0].clicked == true) {
@@ -232,12 +234,14 @@ void draw() {
       contiButtons[8].display = false;
       contiButtons[9].display = true;
       contiButtons[10].display = true;
+      backgrounds[4].display();
       LocationName = backgrounds[4].locationName;
     }
     if (contiButtons[10].clicked == true) {
       backgrounds[4].dialogueOne = false;
       backgrounds[4].dialogueTwo = false;
       backgrounds[5].dialogueOne = true;
+      backgrounds[5].display();
       LocationName = backgrounds[5].locationName;
       contiButtons[10].display = false;
       contiButtons[9].display = false;
@@ -323,8 +327,8 @@ void keyPressed() {
 }
 void startScreen() {
   background(255);
-  //StartScreen = loadImage("Start Screen-1.png.png");
-  //image(StartScreen, 0, 0, 1000, 998);
+  StartScreen = loadImage("Start Screen-1.png.png");
+  image(StartScreen, 0, 0, 1000, 998);
 
   if (mousePressed) {
     play = true;
@@ -340,4 +344,5 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nCLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nAll Buttons can only be \nclicked once \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
+
 
