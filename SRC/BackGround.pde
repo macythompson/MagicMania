@@ -9,10 +9,10 @@ class BackGround {
   boolean dialogueOne, dialogueTwo, dialogueThree, dialogueFour;
 
   //Constructor
-  BackGround(int x, int y, String locationName, String dialogue1, String dialogue2, String dialogue3, String dialogue4, Boolean dialogueOne, Boolean dialogueTwo, Boolean dialogueThree, Boolean dialogueFour) {
+  BackGround(int x, int y, String locationName, String dialogue1, String dialogue2, String dialogue3, String dialogue4, Boolean dialogueOne, Boolean dialogueTwo, Boolean dialogueThree, Boolean dialogueFour, String photoName) {
     this.x = x;
     this.y = y;
-  //  this.photoName = photoName;
+    this.photoName = photoName;
     this.locationName = locationName;
     this.dialogue1 = dialogue1;
     this.dialogue2 = dialogue2;
@@ -22,7 +22,7 @@ class BackGround {
     this.dialogueTwo = dialogueTwo;
     this.dialogueThree = dialogueThree;
     this.dialogueFour = dialogueFour;
-   // photo = loadImage(photoName);
+    photo = loadImage(photoName);
   }
 
   //Member Methods
