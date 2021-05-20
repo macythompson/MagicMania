@@ -14,23 +14,23 @@ void setup() {
   size(1000, 1000);
   inventory = new Inventory(#EDE311);
   spellbook = new SpellBook(#0FF500);
-  backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her!", "Talk to your mother? A - Yes B - No", "\nYou FOOL!! Your Mother soon dies because you refuse to talk to her \n go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her.", true, false, false, false);
+  backgrounds[0] = new BackGround(300, 300, "Bedroom", "Welcome to the game! Your mother is sick and you need to save her!", "Talk to your mother? A - Yes B - No", "\nYou FOOL!! Your Mother soon dies because you refuse to talk to her \n go back and rethink your decision", "You talk with your mother \n She says the only way for you to save her is to learn magic\n She gives you a mysterious Locket, you set off to save her.", true, false, false, false, "#1 bcgnd-1.png.png");
   backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Garbage bin B - Desk", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false);
-  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false);
-  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false);
-  backgrounds[4] = new BackGround(300, 300, "City", "You enter the city, you don't know where to start so you ask others for directions \n A - Beggar B - Bully", "\n\nSDKHDSESK!! says the beggar, you don't quite understand him \nyou try talking with someone else", "Blank", "Blank", false, false, false, false);
-  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "WHAT DO YA WANT!!!!!!!! Says the Bully \n A - Bye B - Hi", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[7] = new BackGround(300, 300, "Battle with Buly P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[8] = new BackGround(300, 300, "Castle", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[9] = new BackGround(300, 300, "Knight Battle P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[10] = new BackGround(300, 300, "Knight Battle P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[11] = new BackGround(300, 300, "Chained Up", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[12] = new BackGround(300, 300, "Cell", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[13] = new BackGround(300, 300, "Hallway", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[14] = new BackGround(300, 300, "Throne Room", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[15] = new BackGround(300, 300, "Queen Battle P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
-  backgrounds[16] = new BackGround(300, 300, "QueenBattle P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false);
+  backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false,  "#1 bcgnd-1.png.png");
+  backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[4] = new BackGround(300, 300, "City", "You enter the city, you don't know where to start so you ask others for directions \n A - Beggar B - Bully", "\n\nSDKHDSESK!! says the beggar, you don't quite understand him \nyou try talking with someone else", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "WHAT DO YA WANT!!!!!!!! Says the Bully \n A - Bye B - Hi", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[7] = new BackGround(300, 300, "Battle with Buly P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[8] = new BackGround(300, 300, "Castle", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[9] = new BackGround(300, 300, "Knight Battle P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[10] = new BackGround(300, 300, "Knight Battle P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[11] = new BackGround(300, 300, "Chained Up", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[12] = new BackGround(300, 300, "Cell", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[13] = new BackGround(300, 300, "Hallway", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[14] = new BackGround(300, 300, "Throne Room", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[15] = new BackGround(300, 300, "Queen Battle P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
+  backgrounds[16] = new BackGround(300, 300, "QueenBattle P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
   contiButtons[0] = new ContinueButton(200, 900, 50, 100, "Next", true, false);
   contiButtons[1] = new ContinueButton(200, 900, 50, 100, "A", false, false);
   contiButtons[2] = new ContinueButton(400, 900, 50, 100, "B", false, false);
@@ -118,6 +118,7 @@ void draw() {
       contiButtons[0].display = false;
       contiButtons[2].display = true;
       contiButtons[1].display = true;
+      backgrounds[0].display();
     } 
     if (contiButtons[1].clicked == true) {
       backgrounds[0].dialogueTwo = false;
