@@ -18,7 +18,7 @@ void setup() {
   backgrounds[1] = new BackGround(300, 300, "StorageRoom", "Find the things you need. A - Garbage bin B - Desk", "You find a SpellBook in the Desk \n You look inside it and see two spells in it called Jump and Fire", "\nTheres nothing useful in a garbage bin because everything is trash... like you \n go back and look harder", "Blank", false, false, false, false, "#2 bcgnd-1.png.png");
   backgrounds[2] = new BackGround(300, 300, "Outside", "Now that you have a spell book to learn magic, you go outside to start your quest \n A - Woods, B - City", "You get attacked by wolves as soon as you enter, you drag yourself back to your house \n go back and find another place to go", "You think that the city is a great place to start your quest\n you take a path to get there", "Blank", false, false, false, false,  "#3 bcgnd-1.png.png");
   backgrounds[3] = new BackGround(300, 300, "Path", "As you travel to the city, you see a boulder blocking the path\n You decide to try out your jump spell\n Hint: click Jump in your spell book", "You jumped over the boulder\n You see the city as you congratulate yourself for using your first spell", "Blank", "Blank", false, false, false, false, "#4 bcgnd-1.png.png");
-  backgrounds[4] = new BackGround(300, 300, "City", "You come upon a grey, ugly city. You probably need something here", "You see a suspicious note on the ground, pick it up? A-Yes B-No", "\n Why wouldn't you want to pick it up? I thought you'd love that kind of thing, try again", "\nThere you go on the not you obtained Pierce, Distract and Snatch", false, false, false, false, "#5 bcgnd-1.png.png");
+  backgrounds[4] = new BackGround(300, 300, "City", "You come upon a grey, ugly city. You probably need something here", "You see a suspicious note on the ground, pick it up? A-No B-Yes", "\n Why wouldn't you want to pick it up? I thought you'd love that kind of thing, try again", "\nThere you go, on the note you obtained Pierce, Distract and Snatch", false, false, false, false, "#5 bcgnd-1.png.png");
   backgrounds[5] = new BackGround(300, 300, "Confronting Bully", "HEY!!!!!!!! Says the Bully \n A - Bye B - Hi", "YOU HAVE MY SPELLS, I'm gonna need those back...", "I don't want any cowards plaing this game, go talk to him...", "Blank", false, false, false, false, "#6 background-1.png.png");
   backgrounds[6] = new BackGround(300, 300, "Battle With Bully P1", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
   backgrounds[7] = new BackGround(300, 300, "Battle with Buly P2", "Blank", "Blank", "Blank", "Blank", false, false, false, false, "#1 bcgnd-1.png.png");
@@ -41,11 +41,11 @@ void setup() {
   contiButtons[7] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[8] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[9] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[10] = new ContinueButton(400, 900, 50, 100, "B", false, false);
-  contiButtons[11] = new ContinueButton(200, 900, 50, 100, "A", false, false);
+  contiButtons[10] = new ContinueButton(200, 900, 50, 100, "A", false, false);
+  contiButtons[11] = new ContinueButton(400, 900, 50, 100, "B", false, false);
   contiButtons[12] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[13] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
-  contiButtons[14] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
+  contiButtons[13] = new ContinueButton(200, 900, 50, 100, "A", false, false);
+  contiButtons[14] = new ContinueButton(400, 900, 50, 100, "B", false, false);
   contiButtons[15] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[16] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
   contiButtons[17] = new ContinueButton(200, 900, 50, 100, "Next", false, false);
@@ -248,12 +248,30 @@ void draw() {
       backgrounds[4].dialogueThree = false;
       contiButtons[10].display = false;
       contiButtons[11].display = false;
+      contiButtons[12].display = true;
      } else if (contiButtons[10].clicked == true){
       backgrounds[4].dialogueThree = true;
       contiButtons[10].display = false;
+     }
+     if (contiButtons[12].clicked == true){
+       backgrounds[4].dialogueTwo = false;
+       backgrounds[4].dialogueFour = false;
+       backgrounds[5].dialogueOne = true;
+       LocationName = backgrounds[5].locationName;
+       backgrounds[5].display();
+       contiButtons[13].display = true;
+       contiButtons[14].display = true;
+     }
+     if (contiButtons[14].clicked == true);
+     backgrounds[5].dialogueOne = false;
+     backgrounds[5].dialogueTwo = true;
+     backgrounds[5].dialogueThree = false;
+     contiButtons[15].display = true;
+     contiButtons[14].display = false;
+     }
     }
   }
-}
+
 void mousePressed() {
   for (int i=0; i<spells.length; i++) {
     spells[i].mousePressed();
@@ -346,4 +364,3 @@ void infoPanel() {
   textSize(20);
   text("WARNING: DO NOT RANDOMLY \nCLICK SPELLS \nIT WILL MESS UP GAME \nFOLLOW DIALOGUE CAREFULLY \n\nAll Buttons can only be \nclicked once \n\nPress I to open Inventory \nPress S to open SpellBook \n\n\nYou are at " + LocationName, 50, 100);
 }
-
